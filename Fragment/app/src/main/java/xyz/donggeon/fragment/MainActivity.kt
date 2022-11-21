@@ -16,9 +16,10 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun setFragment() {
-        val listFragment: ListFragment = ListFragment()
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.add(R.id.frameLayout, listFragment)
-        transaction.commit()
+//        val fragment = ListFragment()
+//        val fragmentManager = supportFragmentManager
+//        val fragmentTransaction = fragmentManager.beginTransaction()
+//        fragmentTransaction.replace(R.id.frameLayout, fragment)
+//        fragmentTransaction.commit()
     }
 }
