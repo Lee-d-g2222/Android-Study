@@ -6,23 +6,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import xyz.donggeon.fragment.databinding.FragmentListBinding
 
-class ListFragment : Fragment() {
+class DetailFragment : Fragment() {
 
-    var mainActivity: MainActivity? = null
+    lateinit var mainActivity: MainActivity
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding = FragmentListBinding.inflate(inflater, container, false)
-        binding.btnNext.setOnClickListener {
-            mainActivity?.goDetail()
-        }
-        return binding.root
-
+        return inflater.inflate(R.layout.fragment_detail, container, false)
     }
 
     override fun onAttach(context: Context) {

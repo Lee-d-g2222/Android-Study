@@ -14,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         setFragment()
 
 
+
+
     }
     fun setFragment() {
 //        val fragment = ListFragment()
@@ -21,5 +23,17 @@ class MainActivity : AppCompatActivity() {
 //        val fragmentTransaction = fragmentManager.beginTransaction()
 //        fragmentTransaction.replace(R.id.frameLayout, fragment)
 //        fragmentTransaction.commit()
+    }
+
+    fun goDetail() {
+        val detailFragment = DetailFragment()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.add(R.id.frameLayout, detailFragment)
+        transaction.addToBackStack("detail")
+        transaction.commit()
+    }
+
+    fun goBack() {
+        onBackPressed()
     }
 }

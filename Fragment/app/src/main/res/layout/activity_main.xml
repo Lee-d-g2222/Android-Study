@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentLayout"
+        android:id="@+id/frameLayout"
         android:name="xyz.donggeon.fragment.ListFragment"
         android:layout_width="match_parent"
         android:layout_height="680dp"
