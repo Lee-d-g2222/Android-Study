@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import xyz.donggeon.fragment.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {
 
@@ -15,14 +16,15 @@ class DetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detail, container, false)
+        val binding = FragmentDetailBinding.inflate(inflater, container, false)
+        binding.btnBack.setOnClickListener {
+            mainActivity.goBack()
+        }
+        return binding.root
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is MainActivity) {
-            mainActivity = context
-        }
+        mainActivity = context as MainActivity
     }
 }
